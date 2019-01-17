@@ -1,0 +1,16 @@
+{
+  "name": "cloudbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mineflayer": "^2.7.3",
+    "mineflayer-blockfinder": "0.0.7",
+    "mineflayer-navigate": "0.0.10"
+  }
+}
