@@ -3,6 +3,8 @@ const blockFinderPlugin = require('mineflayer-blockfinder')(mineflayer);
 const navigatePlugin = require('mineflayer-navigate')(mineflayer);
 
 const jump = require('./modules/jump.js');
+const craft = require('./modules/craft.js');
+
 const attackPlayer = require('./modules/attackPlayer.js');
 const getWood = require('./modules/getWood.js');
 let jumpstate = false;
@@ -21,6 +23,7 @@ bot.loadPlugin(blockFinderPlugin);
 bot.navigate.blocksToAvoid[132] = true; // avoid tripwire
 bot.navigate.blocksToAvoid[59] = false; // ok to trample crops
 
+
 console.log("Bot running...");
 let taskIndex = 0;
 let taskList = ["jump", "dig"];
@@ -35,6 +38,9 @@ bot.on('whisper', function(username, message) {
       }
       if(message === "!getWood"){
         getWood.find(bot);
+      }
+      if(message === "!buildWorkBench"){
+        craft.workbench(bot);
       }
   }
 });
